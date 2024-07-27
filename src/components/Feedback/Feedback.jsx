@@ -1,6 +1,6 @@
 import s from "./Feedback.module.css";
 
-const Feedback = ( {feedback} ) => {
+const Feedback = ({ feedback, totalFeedback }) => {
   return (
     <div>
       <p>Good: {feedback.good}</p>
