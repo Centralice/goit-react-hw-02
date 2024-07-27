@@ -1,28 +1,15 @@
-import { useState } from "react";
 import s from "./Options.module.css";
 
-const Options = () => {
-
-  const [feedback, setFeedback] = useState(0);
-
-  const handleGood = () => {
-    setFeedback (feedback +1);
-  };
-  const handleNeutral = () => {
-
-  };
-  const handleBad = () => {
-
-  };
-
+const Options = ({ feedback, updateFeedback }) => {
   return (
     <div>
-      <button onClick={handleGood}>Good</button>
-      <button onClick={handleNeutral}>Neutral</button>
-      <button onClick={handleBad}>Bad</button>
-      <p>Good: {feedback}</p>
-      <p>Neutral: </p>
-      <p>Bad: </p>
+      <button onClick={() => updateFeedback("good")}>Good</button>
+      <button onClick={() => updateFeedback("neutral")}>Neutral</button>
+      <button onClick={() => updateFeedback("bad")}>Bad</button>
+
+      <p>Good: {feedback.good}</p>
+      <p>Neutral: {feedback.neutral}</p>
+      <p>Bad: {feedback.bad}</p>
     </div>
   );
 };
