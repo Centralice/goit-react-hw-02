@@ -20,8 +20,8 @@ const App = () => {
   return (
     <div>
       <Description />
-      <Options feedback={feedback} updateFeedback={updateFeedback} />
-      <Feedback />
+      <Options updateFeedback={updateFeedback} />
+      <Feedback feedback={feedback} />
     </div>
   );
 };
