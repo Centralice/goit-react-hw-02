@@ -38,13 +38,7 @@ const App = () => {
 
   useEffect(() => {
     window.localStorage.setItem("savedFeedback", JSON.stringify(feedback));
-  }, [
-    {
-      good: 0,
-      neutral: 0,
-      bad: 0,
-    },
-  ]);
+  }, [feedback]);
 
   return (
     <div>
